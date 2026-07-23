@@ -7,8 +7,9 @@ tools will have containers published and available on quay.io.
 
 ## Adding Your Repository
 
-Feel free to open a pull request to add your repository to the list in `repositories.list` to monitor
-your tools published tn GitHub as well.
+Feel free to open a pull request to add your repository to one of the
+`repositories*.list` files (e.g. `repositories01.list`) to monitor your tools
+published on GitHub as well.
 
 ## Implementation
 
@@ -16,7 +17,7 @@ See [monitor.yaml](https://github.com/galaxyproject/planemo-monitor/blob/master/
 is meant to be executed as a cron job - it will clone each repository tracked and walk all
 available tools using Planemo. For each tool it will check its requirements and for each combination
 of requirements in such tools and ensure that this combination of requirements is registered in
-https://github.com/jmchilton/multi-package-containers or that there is an open request already. To perform
+https://github.com/BioContainers/multi-package-containers or that there is an open request already. To perform
 this registeration - planemo simply opens a pull request adding a hashed file to that repository -
 once merged the CI associated with multi-package-containers will build and publish that container to
 [quay.io](https://quay.io).
